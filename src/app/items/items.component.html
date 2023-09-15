@@ -1,0 +1,15 @@
+<table>
+    <thead>
+        <th>Mobile</th>
+        <th>Year</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let item of itemsList; let i = index">
+        <td>{{item.item}}</td>
+        <td>{{item.model}}</td>
+        <td><button type="button" (click)="addItem(i)">Add</button></td>
+        </tr>
+    </tbody>
+</table>
+<app-wishlist [actionClicked]="actionClicked"></app-wishlist>
